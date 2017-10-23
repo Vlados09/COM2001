@@ -10,8 +10,8 @@ module Dominoes where
 
     dsame :: Domino->Domino -> Bool
     dsame d1 d2
-      | (fst d1 == fst d2) && (snd d1 == snd d2) = True
-      | otherwise = False
+        | (fst d1 == fst d2) && (snd d1 == snd d2) = True
+        | otherwise = False
 
     type Hand = [(Domino)]
 
@@ -39,6 +39,7 @@ module Dominoes where
     goesP d b e
         | (e == L) = ((fst d == fst head b) || (snd d == fst head b))
         | (e == R) = ((fst d == last tail b) || (snd d == last tail b))
+        | otherwise = False
 
     knockingP :: Hand->Board -> Bool
     knockingP _ [] = True
@@ -50,5 +51,5 @@ module Dominoes where
     playedP :: Domino->Board -> Bool
     playedP _ [] = False
     playedP d (h:t)
-      | (dsame d h) = True
-      | otherwise playedP d t
+            | (dsame d h) = True
+            | otherwise playedP d t
