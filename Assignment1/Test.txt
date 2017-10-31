@@ -1,0 +1,120 @@
+Testing Domino type :
+
+Input : dcreate 5 3
+Output : (5,3)
+All ouputs correct!
+
+Input : dsame (5,3) (5,3)
+Output : True
+Input : dsame (3,5) (5,3)
+Output : True
+Input : dsame (3,6)(4,2)
+Output : False
+All ouputs correct!
+
+Input : dflip (3,6)
+Output : (6,3)
+All ouputs correct!
+
+
+Testing Hand type :
+
+Input : hcreate
+Output : []
+All ouputs correct!
+
+Input : hadd (3,5) []
+Output : [(3,5)]
+All ouputs correct!
+
+Testing Board type :
+
+Input : bcreate
+Output : []
+All ouputs correct!
+
+Input : badd (3,5) [] L
+Output : [(3,5)]
+Input : badd (3,5) [(5,6)] L
+Output : [(3,5),(5,6)]
+Input : badd (5,3) [(5,6)] L
+Output : [(3,5),(5,6)]
+Input : badd (6,3) [(5,6)] R
+Output : [(5,6),(6,3)]
+Input : badd (3,6) [(2,1)] R
+Output : [(2,1)]
+All ouputs correct!
+
+Input : sume [(6,6),(6,5),(5,5)]
+Output : 22
+Input : sume [(6,6),(6,5)]
+Output : 17
+Input sume [(3,5),(5,5)]
+Output : 13
+Input sume [(3,4),(4,6)]
+Output : 9
+All ouputs correct!
+
+
+Testing other functions :
+
+goesP :
+Input : goesP (5,6) [(5,3)] L
+Output : True
+Input : goesP (3,6) [(5,3)] R
+Output : True
+Input : goesP (4,5) [(3,5)] L
+Output : False
+All ouputs correct!
+
+knockingP :
+Input : knockingP [(3,5),(2,1)] [(6,4),(4,0),(0,0)]
+Output : True
+Input : knockingP [(3,5),(2,1)] [(6,4),(4,0),(0,3)]
+Output : False
+All ouputs correct!
+
+playedP :
+Input : playedP (4,6) [(5,6),(6,4)]
+Output : True
+Input : playedP (4,6) [(5,6),(6,3)]
+Output : False
+All ouputs correct!
+
+possPlays :
+Input : possPlays [(5,4),(3,2),(4,3),(6,4)] [(5,6),(6,4)]
+Output : ([(5,4)],[(5,4),(4,3)])
+Input : possPlays [(5,4),(3,2),(4,3),(6,4)] [(0,0),(0,1)]
+Output : ([],[])
+Input : possPlays [(5,4),(3,2)] []
+Output : ([(5,4),(3,2)],[(5,4),(3,2)])
+All ouputs correct!
+
+playDom :
+Input : playDom (3,4) [(3,6),(6,4)] L
+Output: Just [(4,3),(3,6),(6,4)]
+Input :  playDom (3,4) [(3,6),(6,4)] R
+Output : Just [(3,6),(6,4),(4,3)]
+Input : playDom (2,2) [(3,6),(6,4)] R
+Output : Nothing
+All ouputs correct!
+
+scoreBoard :
+Input : scoreBoard [(6,6),(6,0),(0,1)]
+Output : 0
+Input : scoreBoard [(6,6),(6,0),(0,1),(1,3)]
+Output : 8
+Input : scoreBoard [(5,6),(6,0),(0,1),(1,5)]
+Output : 2
+All ouputs correct!
+
+scoreN :
+Input : scoreN [(4,5),(5,1)] 1
+Output : ([(2,4)],[])
+Input : scoreN [(4,5),(5,1)] 2
+Output : ([],[(1,1),(1,2),(1,6)])
+Input : scoreN [(4,5),(5,1)] 3
+Output : ([(4,4)],[])
+Input : scoreN [(4,5),(5,1)] 6
+Output : ([],[])
+All ouputs correct!
