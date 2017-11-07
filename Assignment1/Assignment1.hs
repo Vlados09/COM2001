@@ -5,7 +5,7 @@ Description :  Data types and simple functions for domino game.
 Stability   :  experimental
 -}
 
-module Dominoes where
+module Assignment1 where
 
     {- VARIABLE NAMES
         b a Board
