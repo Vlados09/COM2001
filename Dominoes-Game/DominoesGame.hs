@@ -1,11 +1,11 @@
 {- |
-Module      :  Assignment2
+Module      :  DominoesGame
 Writen By   :  Vladyslav Bondarenko
 Description :  Functions to play a game of Dominoes
 Stability   :  experimental
 -}
 
-module Assignment2 where
+module DominoesGame where
 
     import System.Random
     import Data.Maybe

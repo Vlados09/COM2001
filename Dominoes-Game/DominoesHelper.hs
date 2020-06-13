@@ -1,11 +1,11 @@
 {- |
-Module      :  Assignment1
+Module      :  DominoesHelper
 Writen By   :  Vladyslav Bondarenko
 Description :  Data types and simple functions for domino game.
 Stability   :  experimental
 -}
 
-module Assignment1 where
+module DominoesHelper where
 
     {- VARIABLE NAMES
         b a Board
